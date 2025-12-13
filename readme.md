@@ -12,7 +12,7 @@ yay -S swaync
 yay -S hyprlock
 yay -S hypridle
 
-<!-- For  creating symlinks in foldersn-->
+<!-- For  creating symlinks in folders -->
 yay -S stow
 
 yay -S hyprpaper
@@ -26,6 +26,22 @@ sudo pacman -S bitwarden
 sudo pacman -S discord
 yay -S cura-bin
 yay -S superslicer-bin
+sudo pacman -S onlyoffice
+sudo pacman -S inkscape
+
+-- Drivers --
+<!-- Logitech mouse drivers. Piper is better as it actually changes onboard memory -->
+sudo pacman -S solaar
+sudo pacman -S piper
+
+<!-- Printers  -->
+sudo pacman -S cups
+<!-- Have cups service start on boot -->
+sudo systemctl enable cups.service
+<!-- Start cups service now -->
+sudo systemctl start cups.service
+<!-- For the munbyn printer https://forum.manjaro.org/t/munbyn-itpp941-stopped-no-available-printer/114284/3 -->
+sudo pacman -Sy ghostscript
 
 To see where files are installed via yay and pacman:
 yay -Ql packagename
