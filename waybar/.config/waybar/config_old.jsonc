@@ -1,0 +1,44 @@
+{
+  "position": "bottom",
+  
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": ["network", "pulseaudio", "cpu", "memory", "clock"],
+  
+  "clock": {
+  	"interval": 1,
+    "format": "<span> </span>{:%a %b %d %r}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "memory": {
+      "interval": 1,
+      "rotate": 270,
+      "format": "{icon}",
+      "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
+      "max-length": 10
+  },
+  "cpu": {
+      "interval": 1,
+      "format": "{icon}",
+      "rotate": 270,
+      "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
+  },
+  "network": {
+    "format-wifi": "<span>   </span>{essid}",
+    "format-ethernet": "<span color='#a6e3a1'>󰈀</span>",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "<span color='#a6e3a1'>󰈀</span>",
+    "tooltip-format-wifi": "Signal Strength: {signalStrength}%",
+    "format-disabled": "<span>󰣽 </span>Disabled",
+	"tooltip": true
+  },
+  "pulseaudio": {
+      "format": "{icon}{volume}%",
+      "format-muted": "",
+      "format-icons": {
+          "default": ["", "", " "]
+      },
+      "on-click": "pavucontrol",
+  },
+  "reload_style_on_change": true
+}

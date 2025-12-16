@@ -4,7 +4,8 @@ Commands:
 -- Hyprland Stuff --
 sudo pacman -S waybar
 sudo pacman -S wofi
-sudo pacman -S otf-font-awesome
+<!-- https://github.com/adi1090x/rofi?tab=readme-ov-file for rofi themes -->
+sudo pacman -S rofi
 sudo pacman -S cachyos-gaming-meta
 sudo pacman -S cachyos-gaming-applications
 yay -S hyprshot
@@ -15,9 +16,17 @@ yay -S hypridle
 <!-- For  creating symlinks in folders -->
 yay -S stow
 
+<!-- Fonts -->
+sudo pacman -S otf-font-awesome
+yay -S ttf-cascadia-code-nerd
+sudo pacman -S ttf-jetbrains-mono-nerd
+yay -S maplemono-ttf
+sudo pacman -S material-symbols-font
+sudo pacman -S ttf-mononoki-nerd
+sudo pacman -S noto-fonts noto-fonts-extra noto-fonts-emoji
+
 yay -S hyprpaper
 yay -Sy starship
-yay -S ttf-cascadia-code-nerd
 yay -S nwg-look
 yay -Sy catppuccin-gtk-theme-mocha
 
@@ -28,6 +37,9 @@ yay -S cura-bin
 yay -S superslicer-bin
 sudo pacman -S onlyoffice
 sudo pacman -S inkscape
+yay -S spotify
+<!-- Dolphin tar.gz ui -->
+sudo pacman -S ark
 
 -- Drivers --
 <!-- Logitech mouse drivers. Piper is better as it actually changes onboard memory -->
@@ -53,9 +65,8 @@ to the bottom of the ~/.config/fish/config.fish file
 
 Get icons https://www.nerdfonts.com/
 
-TO DO: 
-- Edit Waybar config
-- Edit Wofi
-
 Catppuccin for coloring and themeing. hyprmocha uses this, along with other things like nwg-look for gtk settings
 hyprmocha (in hypr/mocha.conf) defines colors that other hypr components can use
+
+-- Rofi --
+Powermenu, currently using type-1, style-1
