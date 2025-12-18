@@ -123,9 +123,9 @@
   
 "hyprland/window": {  
 	//"format": "{}",   // <--- these is the default value  
-	"format": "<span  weight='bold' >{class}</span>",
+	"format": "{}",
 	"max-length": 120,
-	"icon": false,
+	"icon": true,
 	"icon-size": 13,
 },
 

@@ -1,3 +1,22 @@
+@define-color bg #0F0F17;
+@define-color button-bg #1E1E2E;
+@define-color light-coral #F08080;
+@define-color white #FFFFFF;
+@define-color steel #CDD6f4;
+@define-color rose #F38BA8;
+@define-color navy-blue #181825;
+@define-color light-orange #FAB387;
+@define-color light-yellow #F9E2AF;
+@define-color blue-grey #A1BDCE;
+@define-color teal #94E2D5;
+@define-color light-purple #CBA6F7;
+@define-color dodger-blue #1E90FF;
+@define-color light-salmon #FFB0B0;
+@define-color pale-red #F2CDCD;
+@define-color sky-blue #87CEEB;
+@define-color dark-sky-blue #2096C0;
+@define-color dark-grey #343434;
+
 * {
 	border: none;
 	border-radius: 0;
@@ -5,20 +24,26 @@
 	font-size: 13px;
 }
 
+/* Windows */
+#window {
+	color: @white;
+	font-weight: bold;
+}
 window#waybar {
-	background-color: #181825;
+	/* background-color: #0F0F17; */
+	background-color: transparent;
+
 	transition-property: background-color;
 	transition-duration: 0.5s;
 }
-
 window#waybar.hidden {
 	opacity: 0.5;
 }
 
+/* Workspaces */
 #workspaces {
 	background-color: transparent;
 }
-
 #workspaces button {
 	all: initial;
 	/* Remove GTK theme values (waybar #1351) */
@@ -29,26 +54,24 @@ window#waybar.hidden {
 	padding: 6px 18px;
 	margin: 6px 3px;
 	border-radius: 4px;
-	background-color: #1e1e2e;
-	color: #cdd6f4;
+	background-color: @button-bg;
+	color: @steel;
 }
-
 #workspaces button.active {
-	color: #1e1e2e;
-	background-color: #cdd6f4;
+	color: @button-bg;
+	background-color: @steel;
 }
-
 #workspaces button:hover {
 	box-shadow: inherit;
 	text-shadow: inherit;
-	color: #1e1e2e;
-	background-color: #cdd6f4;
+	color: @button-bg;
+	background-color: @steel;
 }
-
 #workspaces button.urgent {
-	background-color: #f38ba8;
+	background-color: @rose;
 }
 
+/* Buttons */
 #memory,
 #custom-power,
 #battery,
@@ -57,91 +80,103 @@ window#waybar.hidden {
 #custom-audio,
 #network,
 #clock,
+#custom-notification,
+
 #tray {
 	border-radius: 4px;
 	margin: 6px 3px;
 	padding: 6px 12px;
-	background-color: #1e1e2e;
-	color: #181825;
-}
-
-#custom-power {
-	margin-right: 6px;
-}
-
-#custom-logo {
-	padding-right: 7px;
-	padding-left: 7px;
-	margin-left: 5px;
-	font-size: 15px;
-	border-radius: 8px 0px 0px 8px;
-	color: #1793d1;
+	background-color: @button-bg;
+	color: @navy-blue;
 }
 
 #memory {
-	background-color: #fab387;
-}
-
-#backlight {
-	background-color: #fab387;
+	background-color: @light-orange;
 }
 
 #pulseaudio {
-	padding-left: 14px;
+	padding-left: 10px;
 	padding-right: 16px;
-	background-color: #f9e2af;	
+	background-color: @light-yellow;	
 }
-
-#custom-audio {
-	color: #aec6f9;
-	background-color: transparent;
-	padding-left: 4px;
-	padding-right: 0px;
-}
-
 #pulseaudio-slider slider {
-	background: #A1BDCE;
+	background: @blue-grey;
 	background-color: transparent;
 	box-shadow: none;
 	margin-right: 0px;
 }
-
 #pulseaudio-slider trough {
 	margin-top: -3px;
 	min-width: 90px;
 	min-height: 10px;
 	margin-bottom: -4px;
 	border-radius: 8px;
-	background: #343434;
+	background: @dark-grey;
 }
-
 #pulseaudio-slider highlight {
 	border-radius: 8px;
-	background-color: #2096C0;
+	background-color: @dark-sky-blue;
 }
 
 #network {
-	background-color: #94e2d5;
+	background-color: @teal;
 	padding-right: 14px;
 }
 
 #clock {
-	font-family: JetBrainsMono Nerd Font;
-	background-color: #cba6f7;
+	background-color: @light-purple;
 }
 
-#custom-power {
-	background-color: #f2cdcd;
+#mpris {
+	margin-left: 20px;
+	font-size: 15px;
+	font-weight: bold;
+	color: white;
+	animation: repeat;
+	animation-name: blink;
+	animation-duration: 3s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 }
-
+#mpris.paused {
+	color: @light-coral;
+}
 
 tooltip {
 	border-radius: 8px;
 	padding: 15px;
-	background-color: #131822;
+	background-color: @navy-blue;
 }
-
 tooltip label {
 	padding: 5px;
-	background-color: #131822;
+	background-color: @navy-blue;
+}
+
+/* Custom */
+#custom-logo {
+	padding-right: 7px;
+	padding-left: 7px;
+	margin-left: 5px;
+	font-size: 15px;
+	border-radius: 8px 0px 0px 8px;
+	color: @dodger-blue;
+}
+
+#custom-audio {
+	color: @light-yellow;
+	background-color: transparent;
+	padding-left: 4px;
+	padding-right: 0px;
+}
+
+#custom-power {
+	margin-right: 6px;
+	background-color: @pale-red;
+}
+
+#custom-notification {
+	margin-left: 0px;
+	margin-right: 6px;
+	background-color: @sky-blue;
 }
