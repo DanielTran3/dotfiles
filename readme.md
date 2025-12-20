@@ -12,6 +12,7 @@ yay -S hyprshot
 yay -S swaync
 yay -S hyprlock
 yay -S hypridle
+paru -S clipvault
 
 <!-- For  creating symlinks in folders -->
 yay -S stow
@@ -38,6 +39,7 @@ yay -S superslicer-bin
 sudo pacman -S onlyoffice
 sudo pacman -S inkscape
 yay -S spotify
+sudo pacman -S code
 <!-- Dolphin tar.gz ui -->
 sudo pacman -S ark
 
