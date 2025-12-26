@@ -42,6 +42,20 @@ yay -S spotify
 sudo pacman -S code
 <!-- Dolphin tar.gz ui -->
 sudo pacman -S ark
+sudo pacman -S waterfox
+
+-- File Manager
+sudo pacman -S qt5ct ttf-hack kvantum breeze-icons breeze
+yay -S qt6ct-kde
+sudo pacman -S papirus-icon-theme
+
+<!-- KDE Connect -->
+sudo pacman -S kdeconnect xdg-desktop-portal-hyprland libei
+<!-- Setup firewalls to allow kde connect -->
+sudo ufw allow 1714:1764/tcp comment "kde-connect"
+sudo ufw allow 1714:1764/udp comment "kde-connect"
+sudo ufw reload
+
 
 -- Drivers --
 <!-- Logitech mouse drivers. Piper is better as it actually changes onboard memory -->
@@ -69,6 +83,10 @@ Get icons https://www.nerdfonts.com/
 
 Catppuccin for coloring and themeing. hyprmocha uses this, along with other things like nwg-look for gtk settings
 hyprmocha (in hypr/mocha.conf) defines colors that other hypr components can use
+
+git clone --depth=1 https://github.com/catppuccin/kde catppuccin-kde && cd catppuccin-kde
+Then run install script `./install.sh` to get catppuccin on kde
+qt6ct will set the color scheme for qt apps
 
 -- Rofi --
 Powermenu, currently using type-1, style-1
