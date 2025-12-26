@@ -30,6 +30,7 @@ yay -S hyprpaper
 yay -Sy starship
 yay -S nwg-look
 yay -Sy catppuccin-gtk-theme-mocha
+yay -S bibata-cursor-theme
 
 -- Applications --
 sudo pacman -S bitwarden
