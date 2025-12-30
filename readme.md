@@ -8,7 +8,6 @@ sudo pacman -S wofi
 sudo pacman -S rofi
 sudo pacman -S cachyos-gaming-meta
 sudo pacman -S cachyos-gaming-applications
-yay -S hyprshot
 yay -S swaync
 yay -S hyprlock
 yay -S hypridle
@@ -27,7 +26,7 @@ sudo pacman -S ttf-mononoki-nerd
 sudo pacman -S noto-fonts noto-fonts-extra noto-fonts-emoji
 
 yay -S hyprpaper
-yay -Sy starship
+yay -Sy starship	
 yay -S nwg-look
 yay -Sy catppuccin-gtk-theme-mocha
 yay -S bibata-cursor-theme
@@ -44,6 +43,7 @@ sudo pacman -S code
 <!-- Dolphin tar.gz ui -->
 sudo pacman -S ark
 sudo pacman -S waterfox
+sudo pacman -S satty
 
 -- File Manager
 sudo pacman -S qt5ct ttf-hack kvantum breeze-icons breeze
