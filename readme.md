@@ -47,9 +47,20 @@ sudo pacman -S waterfox
 sudo pacman -S satty
 
 -- File Manager
+<!-- For Dolphin -->
 sudo pacman -S qt5ct ttf-hack kvantum breeze-icons breeze
 yay -S qt6ct-kde
 sudo pacman -S papirus-icon-theme
+
+<!-- December 31, 2025: Change from Dolphin to Nautilus -->
+sudo pacman -S nautilus
+sudo pacman -S gvfs-smb
+sudo pacman -S sushi
+yay -S actions-for-nautilus-git
+
+<!-- Nautilus terminal -->
+yay -S nautilus-open-any-terminal
+gsettings set com.github.stunkymonkey.nautilus-open-any-terminal terminal kitty
 
 <!-- KDE Connect -->
 sudo pacman -S kdeconnect xdg-desktop-portal-hyprland libei
