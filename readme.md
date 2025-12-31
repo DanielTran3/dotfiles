@@ -12,6 +12,7 @@ yay -S swaync
 yay -S hyprlock
 yay -S hypridle
 paru -S clipvault
+sudo pacman -S Konsole
 
 <!-- For  creating symlinks in folders -->
 yay -S stow
