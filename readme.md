@@ -46,6 +46,9 @@ sudo pacman -S ark
 sudo pacman -S waterfox
 sudo pacman -S satty
 sudo pacman -S davinci-resolve
+sudo pacman -S swayimg
+sudo pacman -S imv
+sudo pacman -S vlc
 
 -- File Manager
 <!-- For Dolphin -->
