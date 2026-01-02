@@ -49,6 +49,7 @@ sudo pacman -S davinci-resolve
 sudo pacman -S swayimg
 sudo pacman -S imv
 sudo pacman -S vlc
+sudo pacman -Syu yt-dlp
 
 -- File Manager
 <!-- For Dolphin -->
