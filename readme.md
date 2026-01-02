@@ -45,6 +45,7 @@ sudo pacman -S code
 sudo pacman -S ark
 sudo pacman -S waterfox
 sudo pacman -S satty
+sudo pacman -S davinci-resolve
 
 -- File Manager
 <!-- For Dolphin -->
@@ -57,6 +58,7 @@ sudo pacman -S nautilus
 sudo pacman -S gvfs-smb
 sudo pacman -S sushi
 yay -S actions-for-nautilus-git
+sudo pacman -S gvfs gvfs-mtp gvfs-gphoto2 udisks2 udiskie polkit-gnome
 
 <!-- Nautilus terminal -->
 yay -S nautilus-open-any-terminal
