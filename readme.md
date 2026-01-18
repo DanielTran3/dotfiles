@@ -44,6 +44,7 @@ sudo pacman -S code
 <!-- Dolphin tar.gz ui -->
 sudo pacman -S ark
 sudo pacman -S waterfox
+yay -S floorp
 sudo pacman -S satty
 sudo pacman -S davinci-resolve
 sudo pacman -S swayimg
