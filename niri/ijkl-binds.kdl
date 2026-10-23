@@ -1,0 +1,41 @@
+// IJKL window navigation for niri
+// Save as ~/.config/niri/ijkl-binds.kdl and add this line at the END of config.kdl:
+//     include "ijkl-binds.kdl"
+//
+// Modifier pattern:  Mod = focus   Shift = move column   Ctrl = inside-the-column   Alt = pure workspace focus
+
+binds {
+    // ── 1. FOCUS on this monitor ───────────────────────────
+    Mod+J { focus-column-left; }
+    Mod+L { focus-column-right; }
+    Mod+I { focus-window-or-workspace-up; }     // window up, overflows to workspace
+    Mod+K { focus-window-or-workspace-down; }   // window down, overflows to workspace
+
+    // Pure workspace switching (never touches columns/windows)
+    Mod+Alt+I { focus-workspace-up; }
+    Mod+Alt+K { focus-workspace-down; }
+
+    // ── 2. FOCUS between monitors ──────────────────────────
+    Mod+U { focus-monitor-left; }
+    Mod+O { focus-monitor-right; }
+
+    // ── 3. MOVE columns on this monitor ────────────────────
+    Mod+Shift+J { move-column-left; }
+    Mod+Shift+L { move-column-right; }
+    Mod+Shift+I { move-column-to-workspace-up; }
+    Mod+Shift+K { move-column-to-workspace-down; }
+
+    // ── 3b. Inside a column ────────────────────────────────
+    Mod+Ctrl+J { consume-or-expel-window-left; }    // merge into / pop out of neighbor column
+    Mod+Ctrl+L { consume-or-expel-window-right; }
+    Mod+Ctrl+I { move-window-up; }                  // reorder within the column
+    Mod+Ctrl+K { move-window-down; }
+
+    // Send just ONE window (not its whole column) to another workspace
+    Mod+Ctrl+Shift+I { move-window-to-workspace-up; }
+    Mod+Ctrl+Shift+K { move-window-to-workspace-down; }
+
+    // ── 4. MOVE between monitors ───────────────────────────
+    Mod+Shift+U { move-column-to-monitor-left; }
+    Mod+Shift+O { move-column-to-monitor-right; }
+}
