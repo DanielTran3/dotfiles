@@ -6,8 +6,8 @@
 
 binds {
     // ── 1. FOCUS on this monitor ───────────────────────────
-    Mod+J { focus-column-left; }
-    Mod+L { focus-column-right; }
+    Mod+J { focus-column-or-monitor-left; }     // column left, overflows to left monitor
+    Mod+L { focus-column-or-monitor-right; }    // column right, overflows to right monitor
     Mod+I { focus-window-or-workspace-up; }     // window up, overflows to workspace
     Mod+K { focus-window-or-workspace-down; }   // window down, overflows to workspace
 
@@ -15,13 +15,13 @@ binds {
     Mod+Alt+I { focus-workspace-up; }
     Mod+Alt+K { focus-workspace-down; }
 
-    // ── 2. FOCUS between monitors ──────────────────────────
+    // ── 2. FOCUS between monitors (direct) ─────────────────
     Mod+U { focus-monitor-left; }
     Mod+O { focus-monitor-right; }
 
-    // ── 3. MOVE columns on this monitor ────────────────────
-    Mod+Shift+J { move-column-left; }
-    Mod+Shift+L { move-column-right; }
+    // ── 3. MOVE columns ────────────────────────────────────
+    Mod+Shift+J { move-column-left-or-to-monitor-left; }     // overflows to left monitor
+    Mod+Shift+L { move-column-right-or-to-monitor-right; }   // overflows to right monitor
     Mod+Shift+I { move-column-to-workspace-up; }
     Mod+Shift+K { move-column-to-workspace-down; }
 
@@ -31,11 +31,7 @@ binds {
     Mod+Ctrl+I { move-window-up; }                  // reorder within the column
     Mod+Ctrl+K { move-window-down; }
 
-    // Send just ONE window (not its whole column) to another workspace
-    Mod+Ctrl+Shift+I { move-window-to-workspace-up; }
-    Mod+Ctrl+Shift+K { move-window-to-workspace-down; }
-
-    // ── 4. MOVE between monitors ───────────────────────────
+    // ── 4. MOVE between monitors (direct) ──────────────────
     Mod+Shift+U { move-column-to-monitor-left; }
     Mod+Shift+O { move-column-to-monitor-right; }
 }
