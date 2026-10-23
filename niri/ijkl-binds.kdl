@@ -34,4 +34,9 @@ binds {
     // ── 4. MOVE between monitors (direct) ──────────────────
     Mod+Shift+U { move-column-to-monitor-left; }
     Mod+Shift+O { move-column-to-monitor-right; }
+
+    // ── 5. FLOATING / FULLSCREEN (on G, so F stays stock) ──
+    Mod+G { toggle-window-floating; }
+    Mod+Shift+G { switch-focus-between-floating-and-tiling; }
+    Mod+Ctrl+G { fullscreen-window; }
 }
